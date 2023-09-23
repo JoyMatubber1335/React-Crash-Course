@@ -1,21 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import { Name } from "./component/Greet"; // I write {Name } like this because we pass the Component
+import Myage from "./component/Greet"; // I write Myage like this because we don't pass the default Component
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>hello word!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Name />
+      <Myage />
     </div>
   );
 }
