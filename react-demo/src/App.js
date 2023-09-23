@@ -3,8 +3,12 @@ import Myage from "./component/Greet"; // I write Myage like this because we don
 function App() {
   return (
     <div className="App">
-      <Name />
-      <Myage />
+      <Name id="23" />
+      <Name id="23" />
+      <Name id="23" />
+      <Myage>
+        <h1>This is child props </h1>
+      </Myage>
     </div>
   );
 }
