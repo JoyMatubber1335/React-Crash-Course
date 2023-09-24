@@ -1,4 +1,4 @@
- import "./App.css";
+import "./App.css";
 // // import { Name } from "./component/Greet"; // I write {Name } like this because we pass the Component
 // import Myage from "./component/Greet"; // I write Myage like this because we don't pass the default Component
 // import { Msg } from "./component/State";
@@ -6,7 +6,8 @@
 // import { ConditionalRender } from "./component/ConditionalRendar";
 // import { Style } from "./component/Style";
 // import { ListRender } from "./component/ListRender";
-import { UseState } from "./component/UseState";
+// import { UseState } from "./component/UseState";
+import { UseEffect } from "./component/UseEffect";
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,8 @@ function App() {
       <ConditionalRender />
       <Style />
       <ListRender /> */}
-      <UseState />
+      {/* <UseState /> */}
+      <UseEffect />
     </div>
   );
 }
