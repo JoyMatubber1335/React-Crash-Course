@@ -29,6 +29,7 @@ export const UseEffect = () => {
   const countUpdateDec = () => {
     setCountDecriment((countDecriment) => countDecriment - 1);
   };
+  
 
   return (
     <div>

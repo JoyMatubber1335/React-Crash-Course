@@ -7,7 +7,8 @@ import "./App.css";
 // import { Style } from "./component/Style";
 // import { ListRender } from "./component/ListRender";
 // import { UseState } from "./component/UseState";
-import { UseEffect } from "./component/UseEffect";
+// import { UseEffect } from "./component/UseEffect";
+import { FetchData } from "./component/FetchData";
 function App() {
   return (
     <div className="App">
@@ -23,7 +24,8 @@ function App() {
       <Style />
       <ListRender /> */}
       {/* <UseState /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
+      <FetchData />
     </div>
   );
 }
