@@ -6,7 +6,7 @@ export const ConditionalRender = () => {
       {isName ? "Joy" : "Rana"}
       {/* ternary operator */}
       {isAge && 24}
-      {/* sort curcit operator  */}
+      {/* sort curcit operator  -> render somthing or nothing  */}
     </div>
   );
 };
