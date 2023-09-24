@@ -5,6 +5,7 @@ import { Msg } from "./component/State";
 import { ClickHandler } from "./component/ClickHendler";
 import { ConditionalRender } from "./component/ConditionalRendar";
 import { Style } from "./component/Style";
+import { ListRender } from "./component/ListRender";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
       <ClickHandler />
       <ConditionalRender />
       <Style />
+      <ListRender />
     </div>
   );
 }
