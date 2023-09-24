@@ -4,6 +4,7 @@ import Myage from "./component/Greet"; // I write Myage like this because we don
 import { Msg } from "./component/State";
 import { ClickHandler } from "./component/ClickHendler";
 import { ConditionalRender } from "./component/ConditionalRendar";
+import { Style } from "./component/Style";
 import { ListRender } from "./component/ListRender";
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </Myage>
       <ClickHandler />
       <ConditionalRender />
+      <Style />
       <ListRender />
     </div>
   );
