@@ -11,7 +11,8 @@ import "./App.css";
 // import { UseEffect } from "./component/UseEffect";
 // import { FetchData } from "./component/FetchData";
 // import { MemoFunction } from "./component/MemoFunction";
-import { UseMemo } from "./component/UseMemo";
+// import { UseMemo } from "./component/UseMemo";
+import { UserRef } from "./component/UseRef";
 
 function App() {
   // const [c, cc] = useState(0);
@@ -48,7 +49,9 @@ function App() {
       {/* not render the memo Function  */}
       {/* <FetchData /> */}
       {/* <MemoFunction count={c} /> */}
-      <UseMemo />
+      {/* <UseMemo />
+       */}
+      <UserRef />
     </div>
   );
 }
