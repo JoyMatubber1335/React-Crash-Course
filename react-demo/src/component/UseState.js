@@ -11,6 +11,7 @@ export const UseState = () => {
     serCount((previous) => previous + 1);
     setColor("green");
   };
+  console.log("render use state");
   return (
     <div>
       <button onClick={decriment}>-</button>
