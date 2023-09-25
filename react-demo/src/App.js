@@ -12,6 +12,9 @@ import { useCallback, useState } from "react";
 // import { FetchData } from "./component/FetchData";
 import { MemoFunction } from "./component/MemoFunction";
 // import { UseMemo } from "./component/UseMemo";
+// import { MemoFunction } from "./component/MemoFunction";
+// import { UseMemo } from "./component/UseMemo";
+// import { UserRef } from "./component/UseRef";
 
 function App() {
   const [count, setCount] = useState(0);
