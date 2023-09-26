@@ -1,38 +1,93 @@
-import {  useReducer } from "react";
-
-const ACTION = {
-  INCRIMENT: "increment",
-  DECRIMENT: "decriment",
+import { useState, useReducer } from "react";
+import { Todo } from "./Todo";
+export const ACTIONS = {
+  ADD_TODO: "add-todo",
+  DELETE_TODO: "delete-todo",
 };
 
-function reducer(state, action) {
+function reducer(todos, action) {
   switch (action.type) {
-    case ACTION.DECRIMENT:
-      return { count: state.count - 1 };
-    case ACTION.INCRIMENT:
-      return { count: state.count + 1 };
+    case ACTIONS.ADD_TODO:
+      return [...todos, newTodo(action.payload.name, action.payload.age)];
+    case ACTIONS.DELETE_TODO:
+      return todos.filter((todo) => todo.id !== action.payload.id);
+
     default:
-      return state;
+      return todos;
   }
 }
 
-export const UseReducer = () => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
-  //   const [count, serCount] = useState(4);
+function newTodo(name, age) {
+  return { id: Date.now(), name: name, age: age, complete: false };
+}
 
-  const decriment = () => {
-    dispatch({ type: ACTION.DECRIMENT });
+export const UseReducer = () => {
+  const [todos, dispatch] = useReducer(reducer, []);
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name, age: age } });
+    setName("");
+    setAge("");
   };
-  const incriment = () => {
-    // serCount((previous) => previous + 1);
-    dispatch({ type: ACTION.INCRIMENT });
-  };
-  console.log("render use state");
+
+  console.log(todos);
   return (
     <div>
-      <button onClick={decriment}>-</button>
-      <span>{state.count}</span>
-      <button onClick={incriment}>+</button>
+      <form onSubmit={handelSubmit}>
+        <label>Name</label>
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
+        <label>Age</label>
+        <input type="number" value={age} onChange={(e) => setAge(e.target.value)}></input>
+        <button type="submit">Add todo</button>
+      </form>
+      {todos.map((todo) => {
+        return <Todo key={todo.id} todo={todo} dispatch={dispatch} />;
+      })}
     </div>
   );
 };
+
+// import React, { useState, useReducer } from "react";
+
+// const ACTIONS = {
+//   ADD_TODO: "add-todo",
+// };
+
+// function reducer(todos, action) {
+//   switch (action.type) {
+//     case ACTIONS.ADD_TODO:
+//       return [...todos, newTodo(action.payload.name, action.payload.age)];
+//     default:
+//       return [...todos];
+//   }
+// }
+
+// function newTodo(name, age) {
+//   return { id: Date.now(), name: name, age: age, complete: false };
+// }
+
+// export const UseReducer = () => {
+//   const [todos, dispatch] = useReducer(reducer, []);
+//   const [name, setName] = useState("");
+//   const [age, setAge] = useState(0);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name, age: age } });
+//     setName("");
+//     setAge(0);
+//   };
+
+//   console.log(todos);
+//   return (
+//     <div>
+//       <form onSubmit={handleSubmit}>
+//         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+//         <input type="number" value={age} onChange={(e) => setAge(e.target.value)} />
+//         <button type="submit">Add Todo</button>
+//       </form>
+//     </div>
+//   );
+// };
