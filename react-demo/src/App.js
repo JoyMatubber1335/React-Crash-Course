@@ -11,11 +11,12 @@ import "./App.css";
 // import { UseEffect } from "./component/UseEffect";
 // import { FetchData } from "./component/FetchData";
 // import { MemoFunction } from "./component/MemoFunction";
-import { Context2 } from "./Context/Context2";
+// import { Context2 } from "./Context/Context2";
 // import { UseMemo } from "./component/UseMemo";
 // import { MemoFunction } from "./component/MemoFunction";
 // import { UseMemo } from "./component/UseMemo";
 // import { UserRef } from "./component/UseRef";
+import { UseReducer } from "./component/UseReducer";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -58,7 +59,8 @@ function App() {
       {/* <FetchData /> */}
       {/* <MemoFunction count={count} onHandelIncrement={handelIncriment} /> */}
       {/* <UseMemo /> */}
-      <Context2 />
+      {/* <Context2 /> */}
+      <UseReducer />
     </div>
   );
 }
