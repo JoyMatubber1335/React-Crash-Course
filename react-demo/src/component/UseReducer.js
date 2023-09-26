@@ -3,6 +3,7 @@ import { Todo } from "./Todo";
 export const ACTIONS = {
   ADD_TODO: "add-todo",
   DELETE_TODO: "delete-todo",
+  COMPLETE_TODO: "complete-todo",
 };
 
 function reducer(todos, action) {
@@ -11,7 +12,14 @@ function reducer(todos, action) {
       return [...todos, newTodo(action.payload.name, action.payload.age)];
     case ACTIONS.DELETE_TODO:
       return todos.filter((todo) => todo.id !== action.payload.id);
-
+    case ACTIONS.COMPLETE_TODO: {
+      return todos.map((todo) => {
+        if (todo.id === action.payload.id) {
+          return { ...todo, complete: !todo.complete };
+        }
+        return todo;
+      });
+    }
     default:
       return todos;
   }
