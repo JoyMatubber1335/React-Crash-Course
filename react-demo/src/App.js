@@ -16,12 +16,8 @@ import { Context2 } from "./Context/Context2";
 // import { MemoFunction } from "./component/MemoFunction";
 // import { UseMemo } from "./component/UseMemo";
 // import { UserRef } from "./component/UseRef";
-<<<<<<< Updated upstream
-
-=======
 // import { UseReducer } from "./component/UseReducer";
 import { Axios } from "./Axios/Axios";
->>>>>>> Stashed changes
 function App() {
   // const [count, setCount] = useState(0);
   // const [togle, setTogle] = useState(0);
