@@ -2,6 +2,7 @@ import "./App.css";
 import { MainGame } from "./Tic-tac-toe/MainGame";
 
 // import { GetStart } from "./Documentation/Cimponent/GetStart";
+// import { useCallback, useState } from "react";
 // // import { Name } from "./component/Greet"; // I write {Name } like this because we pass the Component
 // import Myage from "./component/Greet"; // I write Myage like this because we don't pass the default Component
 // import { Msg } from "./component/State";
@@ -12,9 +13,35 @@ import { MainGame } from "./Tic-tac-toe/MainGame";
 // import { UseState } from "./component/UseState";
 // import { UseEffect } from "./component/UseEffect";
 // import { FetchData } from "./component/FetchData";
+// import { MemoFunction } from "./component/MemoFunction";
+// import { Context2 } from "./Context/Context2";
+// import { UseMemo } from "./component/UseMemo";
+// import { MemoFunction } from "./component/MemoFunction";
+// import { UseMemo } from "./component/UseMemo";
+// import { UserRef } from "./component/UseRef";
+// import { UseReducer } from "./component/UseReducer";
+
 function App() {
+  // const [count, setCount] = useState(0);
+  // const [togle, setTogle] = useState(0);
+  // console.log("app render ");
+  // const handelClick = () => {
+  //   setCount((count) => count + 1);
+  // };
+  // const handelIncriment = useCallback(() => {
+  //   return setCount(count + 1);
+  // }, [count]);
+
   return (
     <div className="App">
+      {/* {togle ? "on" : "off"}
+      <button
+        onClick={() => {
+          setTogle(!togle);
+        }}
+      >
+        toggle
+      </button> */}
       {/* {/* <Name id="23" />
       <Name id="23" />
       <Name id="23" /> }
