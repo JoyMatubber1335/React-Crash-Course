@@ -1,4 +1,7 @@
 import "./App.css";
+import { MainGame } from "./Tic-tac-toe/MainGame";
+
+// import { GetStart } from "./Documentation/Cimponent/GetStart";
 // import { useCallback, useState } from "react";
 // // import { Name } from "./component/Greet"; // I write {Name } like this because we pass the Component
 // import Myage from "./component/Greet"; // I write Myage like this because we don't pass the default Component
@@ -16,7 +19,7 @@ import "./App.css";
 // import { MemoFunction } from "./component/MemoFunction";
 // import { UseMemo } from "./component/UseMemo";
 // import { UserRef } from "./component/UseRef";
-import { UseReducer } from "./component/UseReducer";
+// import { UseReducer } from "./component/UseReducer";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -52,15 +55,9 @@ function App() {
       <ListRender /> */}
       {/* <UseState /> */}
       {/* <UseEffect /> */}
-      {/* <h1>{count}</h1> */}
-      {/* <button onClick={handelClick}>click</button> render the memo function */}
-      {/* <button onClick={demo}>click1</button> */}
-      {/* not render the memo Function  */}
       {/* <FetchData /> */}
-      {/* <MemoFunction count={count} onHandelIncrement={handelIncriment} /> */}
-      {/* <UseMemo /> */}
-      {/* <Context2 /> */}
-      <UseReducer />
+      {/* <GetStart />*/}
+      <MainGame />
     </div>
   );
 }
