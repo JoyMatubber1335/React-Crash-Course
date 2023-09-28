@@ -1,6 +1,7 @@
 import "./App.css";
+import { MainGame } from "./Tic-tac-toe/MainGame";
 
-import { GetStart } from "./Documentation/Cimponent/GetStart";
+// import { GetStart } from "./Documentation/Cimponent/GetStart";
 // // import { Name } from "./component/Greet"; // I write {Name } like this because we pass the Component
 // import Myage from "./component/Greet"; // I write Myage like this because we don't pass the default Component
 // import { Msg } from "./component/State";
@@ -28,7 +29,8 @@ function App() {
       {/* <UseState /> */}
       {/* <UseEffect /> */}
       {/* <FetchData /> */}
-      <GetStart />
+      {/* <GetStart />*/}
+      <MainGame />
     </div>
   );
 }
