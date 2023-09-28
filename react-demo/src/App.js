@@ -1,4 +1,6 @@
 import "./App.css";
+
+import { GetStart } from "./Documentation/Cimponent/GetStart";
 // // import { Name } from "./component/Greet"; // I write {Name } like this because we pass the Component
 // import Myage from "./component/Greet"; // I write Myage like this because we don't pass the default Component
 // import { Msg } from "./component/State";
@@ -8,7 +10,7 @@ import "./App.css";
 // import { ListRender } from "./component/ListRender";
 // import { UseState } from "./component/UseState";
 // import { UseEffect } from "./component/UseEffect";
-import { FetchData } from "./component/FetchData";
+// import { FetchData } from "./component/FetchData";
 function App() {
   return (
     <div className="App">
@@ -25,7 +27,8 @@ function App() {
       <ListRender /> */}
       {/* <UseState /> */}
       {/* <UseEffect /> */}
-      <FetchData />
+      {/* <FetchData /> */}
+      <GetStart />
     </div>
   );
 }
